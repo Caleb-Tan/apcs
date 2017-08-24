@@ -1,0 +1,13 @@
+package flag;
+
+public class Main {
+	
+	
+	public static void main(String [] args){
+		Flag f = new Flag();
+		f.setDefaultCloseOperation(c.EXIT_ON_CLOSE);
+		f.setVisible(true);
+		f.init();
+		f.paint(null);
+	}
+}

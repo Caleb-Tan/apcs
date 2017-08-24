@@ -1,0 +1,18 @@
+package flag;
+import java.awt.*;
+import javax.swing.*;
+
+
+public class Flag extends JPanel{
+	
+	int height = 400;
+	int width = 400;
+	 public void init(){
+	  height = getSize().height;
+	  width = getSize().width;
+	  setName("MyApplet");
+	 }
+	 public void paint(Graphics g){
+	  g.drawRoundRect(10, 30, 120, 120, 2, 3);
+	 }
+}

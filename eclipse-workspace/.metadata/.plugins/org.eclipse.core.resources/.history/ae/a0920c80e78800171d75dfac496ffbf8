@@ -1,0 +1,8 @@
+package flag;
+
+public class Main {
+	public static void main(String [] args){
+		flag f = new flag();
+		f.paint(null);
+	}
+}

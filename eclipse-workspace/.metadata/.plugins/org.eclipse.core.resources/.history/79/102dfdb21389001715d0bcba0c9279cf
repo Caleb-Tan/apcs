@@ -1,0 +1,19 @@
+package flag;
+
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class Main {
+	
+	
+	public static void main(String [] args){
+		Flag f = new Flag();
+		JFrame frame = new JFrame("FrameDemo");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setPreferredSize(new Dimension(260, 468));
+		frame.add(f);
+		frame.pack();
+		frame.setVisible(true);
+	}
+}

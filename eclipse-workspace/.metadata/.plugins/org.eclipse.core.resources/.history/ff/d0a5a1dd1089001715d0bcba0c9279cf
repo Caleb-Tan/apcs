@@ -1,0 +1,21 @@
+package flag;
+import java.awt.*;
+import javax.swing.JPanel;
+
+
+public class Flag extends JPanel{
+	
+	
+	 public void paint(Graphics g){
+		 paintRectangle(g, 50);
+			 
+	 }
+	 
+	 public void paintRectangle(Graphics g, int i) {
+			g.setColor(Color.red);
+			g.fillRect(0, i, 950, 100);
+			g.setColor(Color.white);
+			g.fillRect(0, i*2, 950, 100);
+			paintRectangle(g, i);
+	 }
+}

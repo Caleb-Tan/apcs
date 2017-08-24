@@ -1,0 +1,16 @@
+package flag;
+
+import javax.swing.JFrame;
+
+public class Main {
+	
+	
+	public static void main(String [] args){
+		Flag f = new Flag();
+		JFrame frame = new JFrame("FrameDemo");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(f);
+		frame.pack();
+		frame.setVisible(true);
+	}
+}
