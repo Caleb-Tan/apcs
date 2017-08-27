@@ -1,0 +1,5 @@
+
+public class Main {
+	LegalSentence legal = new LegalSentence();
+	legal.process();
+}

@@ -1,0 +1,17 @@
+{
+  "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\rt.jar": {
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\rt.jar",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Program Files\\Java\\jre1.8.0_144\\lib\\rt.jar\u0027. Skipped."
+  },
+  "C:\\Program Files\\Java\\jdk1.8.0_144\\jre\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files\\Java\\jdk1.8.0_144\\jre\\lib\\rt.jar",
+    "status": "RESOLVED"
+  },
+  "C:\\Users\\Dad\\workspace\\LegalSentence\\src": {
+    "location": "C:\\Users\\Dad\\workspace\\LegalSentence\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\Dad\\workspace\\LegalSentence\\src\u0027. Skipped."
+  }
+}

@@ -1,0 +1,26 @@
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String path = "cow.jpg";
+        URL url = new URL(path);
+        BufferedImage image = ImageIO.read(url);
+        JLabel label = new JLabel(new ImageIcon(image));
+        JFrame f = new JFrame();
+        
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.getContentPane().add(label);
+        f.pack();
+        f.setLocation(200,200);
+        f.setVisible(true);
+	}
+
+}
