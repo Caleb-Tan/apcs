@@ -9,7 +9,7 @@ public class Intro {
 		// print the return value of method stars
 		System.out.println(stars(6));
 		// print the return value of method coins
-		System.out.println(coins(112));
+		System.out.println(coins(7));
 		
 	}
 	

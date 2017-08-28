@@ -34,7 +34,16 @@ public class Flag extends JPanel{
 
 	 private void paintStars(Graphics g){
 		 g.setColor(Color.white);
-		 for(int y=9; y<=117; y+=27){
+		 int[] xcoord = new int[5];
+		 int[] ycoord = new int[5];
+		 for (int i=0; i<5; i++) {
+			xcoord[i] = (int) Math.cos(i*(Math.PI*2)/5); 
+			ycoord[i] = (int) Math.sin(i*(Math.PI*2)/5); 
+		 }
+		 
+		 g.fillPolygon(xcoord, xcoord, 5);
+		 
+		 /*for(int y=9; y<=117; y+=27){
 			 for(int x=10; x<=160; x+=30){
 				 g.fillOval(x, y, 15, 15);
 			 }
@@ -43,7 +52,7 @@ public class Flag extends JPanel{
 			for(int x=25; x<=145; x+=30){
 				g.fillOval(x, y, 15, 15);
 			}
-		}
+		}*/
 	 }
 
 }

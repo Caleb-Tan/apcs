@@ -13,6 +13,5 @@ public class Main {
 		frame.pack();
 		frame.setVisible(true);
 		
-		System.out.println("asdf");
 	}
 }
