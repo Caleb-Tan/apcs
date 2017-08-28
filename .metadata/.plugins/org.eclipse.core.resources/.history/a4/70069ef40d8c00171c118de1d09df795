@@ -9,7 +9,7 @@ public class Intro {
 		// print the return value of method stars
 		System.out.println(stars(6));
 		// print the return value of method coins
-		System.out.println(coins(112));
+		System.out.println(coins(1));
 		
 	}
 	
@@ -57,14 +57,13 @@ public class Intro {
 			amountFives -= 1;  		// if not divisible by two, backtrack by subtracting a five cent coin and dividing the remaining amount of coins by two
 			amountTwos += (coins+5)/2;
 		}
-		
-		int total = amountFives + amountTwos;
-		// if original value is equal to 1 or 3, then it is impossible to give change, and the if statement changes the total to -1 
+		// if original value is equal to 1 or 3, then it is impossible to give change, and it returns -1 
 		if (n == 1 | n == 3){ 
-			total = -1;  
+			amountFives = -1;
+			amountTwos = -1;
 		}
 		
-		return total;
+		return amountFives + amountTwos;
 
 	}
 }

@@ -59,9 +59,9 @@ public class Intro {
 		}
 		
 		int total = amountFives + amountTwos;
-		// if original value is equal to 1 or 3, then it is impossible to give change, and the if statement changes the total to -1 
+		// if original value is equal to 1 or 3, then it is impossible to give change, and it returns -1 
 		if (n == 1 | n == 3){ 
-			total = -1;  
+			total = -1;
 		}
 		
 		return total;
