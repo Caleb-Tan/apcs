@@ -9,7 +9,7 @@ public class Intro {
 		// print the return value of method stars
 		System.out.println(stars(6));
 		// print the return value of method coins
-		System.out.println(coins(23));
+		System.out.println(coins(13));
 		
 	}
 	
@@ -41,27 +41,29 @@ public class Intro {
 	}
 	
 	// method coins takes in the value of money and returns an int value of the minimum # coins needed to exchange
-	public static String coins(int n) {
-		int coins = n;
-		int amountFives = 0;
-		int amountTwos = 0;
-		for(int i=5; i<=n; i+=5){
-			amountFives += 1;
-			coins -= 5;
+	public static int coins(int n) {
+		int coins = n; 					// making coins variable
+		int amountFives = 0;			// counter for amount of 5 cent coins
+		int amountTwos = 0;				// counter for amount of 2 cent coins
+		// adds a five cent coin for every five cents that are in the value of money
+		for(int i=5; i<=n; i+=5){ 
+			amountFives += 1; 			// adds a five cent coin
+			coins -= 5; 				// deducts 5 cents from the amount of coins
 		}
+		// if statement checks if remainder is divisible by two
 		if (coins%2 == 0){
-			amountTwos += coins/2;
+			amountTwos += coins/2;	// if remainder is divisible by two, then add amount of two cent coins that adds up to the remainder 
 		} else if (coins%2 != 0){
-			amountFives -= 1;
+			amountFives -= 1;  		// if not divisible by two, backtrack by subtracting a five cent coin and dividing the remaining amount of coins by two
 			amountTwos += (coins+5)/2;
 		}
-		if (n == 1 | n == 3){
+		// if original value is equal to 1 or 3, then it is impossible to give change, and it returns -1 
+		if (n == 1 | n == 3){ 
 			amountFives = -1;
 			amountTwos = -1;
 		}
 		
-		String coinsAmount = "# of 5 cent coins: " + Integer.toString(amountFives) + "\n# of 2 cent coins: " + Integer.toString(amountTwos);
-		return coinsAmount;
+		return amountFives + amountTwos;
 
 	}
 }
