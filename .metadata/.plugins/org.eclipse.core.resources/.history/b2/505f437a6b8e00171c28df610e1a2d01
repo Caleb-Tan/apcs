@@ -42,7 +42,7 @@ public class Flag extends JPanel{
 	 }
 	 
 	 private void paintUnion(Graphics g){
-
+		 int height = heigh
 		 g.setColor(Color.blue);
 		 g.fillRect(0, 0, 187, 140);
 	 }

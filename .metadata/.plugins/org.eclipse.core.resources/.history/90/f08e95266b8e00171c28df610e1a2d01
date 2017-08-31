@@ -20,7 +20,7 @@ public class Flag extends JPanel{
 	// paints the elements
 	 public void paint(Graphics g){
 		paintStripes(g, 0);
-		paintUnion(g);
+
 
 	 }
 	 
@@ -29,20 +29,20 @@ public class Flag extends JPanel{
 		 	// gets the width of the panel
 		 	int height = height()/13;
 		 	// makes the height always equal the 
-		 	int width = (int) (height()*1.9);	 	
+		 	int width = (int) (height*1.9);
+
+		 	
 			g.setColor(Color.red);
 			g.fillRect(0, i, width, height);
 			g.setColor(Color.white);
 			g.fillRect(0, i+height, width, height);
-			if(i <= height*13){
+			if(i <= 199){
 				paintStripes(g, i+height*2);
 			}
 			g.setColor(Color.red);
 			g.fillRect(0, height*12, width, height);			
 	 }
-	 
 	 private void paintUnion(Graphics g){
-
 		 g.setColor(Color.blue);
 		 g.fillRect(0, 0, 187, 140);
 	 }
