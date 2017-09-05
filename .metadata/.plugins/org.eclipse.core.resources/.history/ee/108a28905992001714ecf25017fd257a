@@ -1,0 +1,27 @@
+
+import javax.swing.*;
+
+public class Main {
+	
+	public static void main(String [] args){
+		Flag flag = new Flag();
+		JFrame frame = new JFrame("Flag");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		frame.add(flag);
+		
+		frame.pack();
+		frame.setVisible(true);
+		
+		
+		int a[] = {1,2,3,4,5,6,7};
+		
+		method(a);
+		
+		System.out.println(a[0]);
+	}
+	
+	public static void method(int b[]) {
+		b[0]=5;
+	}
+}

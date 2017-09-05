@@ -13,15 +13,38 @@ public class Flag extends JPanel{
 	// returns the height of the window
 	public int height() {
 		int x = getHeight();
-		System.out.println(x);
 		return x;
 	}
+	
+	
+	
+	
 	
 	// paints the elements
 	 public void paint(Graphics g){
 		paintStripes(g, 0);
 		paintUnion(g);
+		
 
+		for(int x=1; x<=9; x+=2) {
+			double offsety = height()*0.054;
+			offsety = offsety*x;
+			for (int i=1; i<=11; i+=2) {
+				double offsetx = height()*0.063;
+				offsetx = offsetx*i;
+				paintStars(g,offsetx, offsety);
+			}
+		}
+		
+		for (int x=2; x<=8; x+=2) {
+			double offsety = height()*0.054;
+			offsety = offsety*x;
+			for (int i=2; i<=10; i+=2) {
+				double offsetx = height()*0.063;
+				offsetx = offsetx*i;
+				paintStars(g, offsetx, offsety);
+			}
+		}
 	 }
 	 
 	 // paints stripes
@@ -42,21 +65,25 @@ public class Flag extends JPanel{
 	 }
 	 
 	 private void paintUnion(Graphics g){
-
+		 double height = height()*7/13;
+		 // makes the width always equal to height * union ratio
+		 double width = height()*0.76;	 	
 		 g.setColor(Color.blue);
-		 g.fillRect(0, 0, 187, 140);
+		 g.fillRect(0, 0, (int)width, (int)height);
 	 }
 
-	 /*private void paintStars(Graphics g){
+	 private void paintStars(Graphics g, double offsetx, double offsety){
 		 g.setColor(Color.white);
+		 double radius = height()*0.0616/2; 
+		 
 		 int[] xcoord = new int[5];
 		 int[] ycoord = new int[5];
 		 for (int i=0; i<5; i++) {
-			xcoord[i] = (int) Math.cos(i*(Math.PI*2)/5); 
-			ycoord[i] = (int) Math.sin(i*(Math.PI*2)/5); 
+			xcoord[i] = (int) (Math.cos(i*(Math.PI*2)/5+6)*radius + offsetx);
+			ycoord[i] = (int) (Math.sin(i*(Math.PI*2)/5+6)*radius + offsety); 
 		 }
 		 
-		 g.fillPolygon(xcoord, xcoord, 5);
-	 }*/
+		 g.fillPolygon(xcoord, ycoord, xcoord.length);
+	 }
 
 }
