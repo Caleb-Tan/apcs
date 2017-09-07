@@ -1,0 +1,7 @@
+# The Flag Project
+
+The aim of this project was to make a flag from java that is scalable and has the proportions of a realistic flag. In the project, there are 4 main files. **Main.java** is the class that creates the flag and frame objects, and makes the frame appear. **Flag.java** contains all the methods that paint the flag, where each part of the flag is painted in its separate method. **Flag.jar** is the executable jar file, and **README.md** is the readme that you are reading. These files are all inside the src folder.
+
+## What the flag does and does not do
+
+The flag is made as per the US flag specifications. It's elements (stars, union, stripes) are all proportional to each other. Furthermore, no matter how the window is resized, the flag will always adjust to fit the largest size of the window while still remaining in the same ratio. The hardest part of the project 

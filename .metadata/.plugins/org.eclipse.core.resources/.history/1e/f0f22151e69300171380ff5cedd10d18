@@ -1,0 +1,9 @@
+# The Flag Project
+
+The aim of this project was to make a flag from java that is scalable and has the proportions of a realistic flag. In the project, there are 4 main files. **Main.java** is the class that creates the flag and frame objects, and makes the frame appear. **Flag.java** contains all the methods that paint the flag, where each part of the flag is painted in its separate method. **Flag.jar** is the executable jar file, and **README.md** is the readme that you are reading. These files are all inside the src folder.
+
+## What the flag does and does not do
+
+The flag is made as per the US flag specifications. It's elements (stars, union, stripes) are all proportional to each other. Furthermore, the flag resizes when the window is dragged, and will always adjust to fit the largest size of the window while still remaining in the same ratios. I accomplished this by having an method return the height of the window, and having every element be based off of this measurement. This measurement is easy to use because it has the ratio of 1.0, so I simply need to multiply it by the other elements ratios. 
+
+Unfortunately, I have yet to figure out the problem of casting. Due to the fact that the fillShape() functions only take ints and not doubles, information is lost when I am forced to cast to an int. This results in the bottom of the union not always touching 

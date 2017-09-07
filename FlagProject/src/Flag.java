@@ -4,6 +4,7 @@ import javax.swing.JPanel;
 
 
 public class Flag extends JPanel{
+
 	Flag(){
 		// sets preferred size when constructor is run
 		setPreferredSize(new Dimension(750,390));
@@ -18,20 +19,21 @@ public class Flag extends JPanel{
 		return h; 
 	}
 	
+
 	// paints the elements
 	 public void paint(Graphics g){
 		paintStripes(g); // invokes the stripes method to paint the stripes
 		paintUnion(g); // invokes the union method to paint the union
 		
 		
-		/* the for loops below paint the two grids of stars, because the paintStar method paints a single star.
-		 * The outer for loops are for the y axis, while the inner for loops are for the x axis
-		*/
+		// the for loops below paint the two grids of stars, because the paintStar method only paints a single star.
+		//The outer for loops are for the y axis, while the inner for loops are for the x axis
+		
 		for(int x=1; x<=9; x+=2) { 					// paints the outer grid
 			double offsety = (height()*0.054)*x;	// defines the y offset(vertical) between the stars, multiplied by how many offsets needed (x)		
 			for (int i=1; i<=11; i+=2) {			// paints the line of stars
 				double offsetx = (height()*0.063)*i;	// the x offset, multiplied by how many offsets needed (i)					
-				paintStar(g,offsetx, offsety);
+				paintStar(g,offsetx, offsety);			// calls the paint method and passes the offsets into the parameter
 			}
 		}
 		
@@ -44,31 +46,36 @@ public class Flag extends JPanel{
 		}
 	 }
 
-	 // paints stripes
+	 
 	 private void paintStripes(Graphics g) {
-		 	final int width = (int)((height()*1.9));	 	// makes the width always equal the height * 1.9
-		 	final int heightStripe = (int)((height()/13));	// makes the stripes' height be the height/13 
+		 	Color red = new Color(191,10,48);				// creates custom red color object
+		 	final double width = (height()*1.9);	 		// makes the width always equal the height * 1.9
+		 	final double heightStripe = (height()/13);		// makes the stripes' height be the height/13 
 		 	for (int i=0; i<=12; i++){						// loops through for the number of stripes needed
-		 		int offsety = i*heightStripe;				// the vertical offset is always the height of the stripe 
+		 		double offsety = i*heightStripe;			// the vertical offset is always the height of the stripe 
 		 		
 		 		// if statement alternates between red and white to paint the alternating red/white stripes
 		 		if (i%2 == 0){								
-		 			g.setColor(Color.red);
+		 			g.setColor(red);
 		 		} else {
 		 			g.setColor(Color.white);
 		 		}
-		 		g.fillRect(0,offsety,width,heightStripe);
+		 		g.fillRect(0,(int)offsety,(int)width,(int)heightStripe);
 		 	}		
 	 }
 	 
-	 //paints union
+	 
 	 private void paintUnion(Graphics g){
 		 final double height = height()*7/13; 	// sets height of union (ratio is 7/13)
 		 final double width = height()*0.76;	// sets width of union
-		 g.setColor(Color.blue);
-		 g.fillRect(0, 0, (int)width, (int)height);
+		 Color blue = new Color(0,40,104);		// creates blue color object
+		 g.setColor(blue);
+		 g.fillRect(0, 0, (int)width, (int)height);		// takes parameters of height and width that are casted to ints
 	 }
-
+	 
+	 /*paints a single star based on the offsets that are passed into the parameters. 
+	  * Uses trigonometric functions to calculate where each point is.
+	  * */
 	 private void paintStar(Graphics g, double offsetx, double offsety){
 		 g.setColor(Color.white); 
 
