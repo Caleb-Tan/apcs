@@ -8,18 +8,18 @@ The aim of this project was to make a flag from java that is scalable and has th
 
 The flag is made as per the US flag specifications. It's elements (stars, union, stripes) are all proportional to each other. Furthermore, the flag resizes when the window is dragged, and will always adjust to fit the largest size of the window while still remaining in the same ratios. I accomplished this by having an method return the height of the window, and having every element be based off of this measurement. This measurement is easy to use because it has the ratio of 1.0, so I simply need to multiply it by the other elements ratios. 
 
-## Errors
+##Errors
 
 Unfortunately, I have yet to solve the problem of casting. Due to the fact that the fillShape() functions only take ints and not doubles, information is lost when I am forced to cast to an int. This results in the union stuttering up and down very slightly when the window is resized. As of now, it seems that the way to contain this issue is to cast to int at the last moment and for the calculations to be done in doubles. 
 
-## Overview of Code
+##Overview of Code
 
 In the project, there are 2 classes. **Main.java** is the class that creates the flag object as well as the jframe object. In the main method, the flag and jframe object is created, and the flag panel is placed onto the jframe. 
 
 **Flag.java** contains all the methods that paint the flag, where each part of the flag is painted in its separate method. When the flag.java object is created, the constructor is invoked, and the setPreferredSize() function is run to set the default size of the window. 
 Meanwhile, there are 5 important methods: 
-- **height()** is used to constantly return the height of the jframe, because all the other methods use the measurement it returns to create the measurements for their elements.
-- The **paintStripes()** method is used to paint the stripes. It has a for loop that loops through 13 times to paint 13 stripes, and there is an if statement inside that alternates between red and white.  
+- height() is used to constantly return the height of the jframe and all the other methods use the measurement it returns to create their elements. 
+- The paintStripes() method is used to paint the stripes. It has a for loop that loops through 13 times to paint 13 stripes, and there is an if statement inside that alternates between red and white.  
 - The paintUnion() method simply paints a blue rectangle, where the height and width are scaled to be in accordance with the height of the panel.
 - paintStar() paints a single star. It contains the formulas needed to find the locations of the 10 points. An important part of this method is that it takes the parameters of the offsets to create the star at the location that it is offset. (see code and comments)
 - Finally, inside the paint() method, each method is called. The important thing to note is that it contains two sets of for loops. One set paints the outer grid of stars, while the second for loop paints the inner grid. The for loops go through how many stars are needed in each grid, line by line, and passes the offsets of that star into the parameters of the paintStar() method. 
