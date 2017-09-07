@@ -22,11 +22,4 @@ Meanwhile, there are 5 important methods:
 - The paintStripes() method is used to paint the stripes. It has a for loop that loops through 13 times to paint 13 stripes, and there is an if statement inside that alternates between red and white.  
 - The paintUnion() method simply paints a blue rectangle, where the height and width are scaled to be in accordance with the height of the panel.
 - paintStar() paints a single star. It contains the formulas needed to find the locations of the 10 points. An important part of this method is that it takes the parameters of the offsets to create the star at the location that it is offset. (see code and comments)
-- Finally, inside the paint() method, each method is called. The important thing to note is that it contains two sets of for loops. One set paints the outer grid of stars, while the second for loop paints the inner grid. The for loops go through how many stars are needed in each grid, line by line, and passes the offsets of that star into the parameters of the paintStar() method. 
-
-## Challenges
-
-There were two major challenges I faced. First of all, I found it hard to find the way to scale. I had never dealt with java graphics, so I did not know how to use component listener. In the end, I found out that I simply had to make a function that would constantly return the height of the panel, and this approach required no repainting as it would do it automatically. 
-
-I also had trouble making the stars. I was slightly confused about the trigonometry in the formulas, but my friends clarified it for me as well as the demo that Mr. Kuszmaul did. Now I know that it is based on the angle of the circles.
-
+- Finally, inside the paint() method, each method is called. The important thing to note is the

@@ -2976,3 +2976,74 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/flagg/src/Mai
 
 !ENTRY org.eclipse.ui 4 4 2017-09-07 08:59:27.151
 !MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@dd70f78)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@596c189f)}
+!SESSION 2017-09-07 10:10:44.839 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-09-07 10:10:54.468
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\engtechp7'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 10:11:23.101
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@7bb996e0)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@5a88ecb9)}
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 10:13:28.657
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@2fd2a6a4)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@5a816a78)}
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 10:13:28.660
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@2fd2a6a4)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@5a816a78)}
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 10:45:12.153
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@2fd2a6a4)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@5a816a78)}
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 10:45:26.597
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@2fd2a6a4)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@5a816a78)}
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 10:46:26.975
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@2fd2a6a4)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@5a816a78)}
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 10:49:47.906
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@2fd2a6a4)} vs {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@5a816a78)}
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-09-07 10:56:54.878
+!MESSAGE An internal error occurred during: "LabelEventJob".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1263)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:711)
+	at org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator.fireLabelEvent(GitLightweightDecorator.java:731)
+	at org.eclipse.egit.ui.internal.decorators.LabelEventJob.run(GitLightweightDecorator.java:801)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2017-09-07 14:43:42.235 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-09-07 14:44:10.897
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\engtechp7'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 14:44:27.695
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@23938caa)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@4434eb51)}
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 14:45:17.707
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@23938caa)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@4434eb51)}
+
+!ENTRY org.eclipse.ui 4 4 2017-09-07 14:45:20.800
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.print: {ActionHandler(org.eclipse.ui.texteditor.AbstractDecoratedTextEditor$11@23938caa)} vs {ActionHandler(org.eclipse.ui.texteditor.TextOperationAction@4434eb51)}
