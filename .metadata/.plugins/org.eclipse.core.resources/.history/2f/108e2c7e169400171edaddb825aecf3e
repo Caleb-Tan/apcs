@@ -20,9 +20,9 @@ In the project, there are 2 classes. **Main.java** is the class that creates the
 Meanwhile, there are 5 important methods: 
 - **height()** is used to constantly return the height of the jframe, because all the other methods use the measurement it returns to create the measurements for their elements.
 - The **paintStripes()** method is used to paint the stripes. It has a for loop that loops through 13 times to paint 13 stripes, and there is an if statement inside that alternates between red and white.  
-- The **paintUnion()** method simply paints a blue rectangle, where the height and width are scaled to be in accordance with the height of the panel.
-- **paintStar()** paints a single star. It contains the formulas needed to find the locations of the 10 points. An important part of this method is that it takes the parameters of the offsets to create the star at the location that it is offset. (see code and comments)
-- Finally, inside the **paint()** method, each method is called to paint the elements. The important thing to note is that it contains two sets of for loops. One set paints the outer grid of stars, while the second for loop paints the inner grid. The for loops go through how many stars are needed in each grid, line by line, and passes the offsets of that star into the parameters of the paintStar() method. 
+- The paintUnion() method simply paints a blue rectangle, where the height and width are scaled to be in accordance with the height of the panel.
+- paintStar() paints a single star. It contains the formulas needed to find the locations of the 10 points. An important part of this method is that it takes the parameters of the offsets to create the star at the location that it is offset. (see code and comments)
+- Finally, inside the paint() method, each method is called. The important thing to note is that it contains two sets of for loops. One set paints the outer grid of stars, while the second for loop paints the inner grid. The for loops go through how many stars are needed in each grid, line by line, and passes the offsets of that star into the parameters of the paintStar() method. 
 
 ## Challenges
 
