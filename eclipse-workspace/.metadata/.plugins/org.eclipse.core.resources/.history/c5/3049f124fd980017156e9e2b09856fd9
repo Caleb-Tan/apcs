@@ -1,0 +1,36 @@
+
+public class TruthAssignment {
+    
+    private boolean truthVal;
+    
+    // makes prop constant array to store the constants
+    private PropositionConstant[] pc;
+    //makes bool array to store the truth values corresponding to the constants
+    private boolean[] tv;
+    
+
+    public void put(PropositionConstant propC, boolean truthVal) {
+        this.truthVal = truthVal;
+        int i = 0;
+        i++;
+        
+        PropositionConstant[] pc = new PropositionConstant[i];
+        boolean[] tv = new boolean[i];
+        
+        for (int x = 0; x < i-1; x++) {
+            pc[x] = this.pc[x];
+            tv[x] = this.tv[x];
+        }
+        
+        pc[i-1] = propC;
+        tv[i-1] = truthVal;
+        
+        this.pc = pc;
+        this.tv = tv;
+    }
+    
+    public boolean get() {
+        return truthVal;
+    }
+    
+}

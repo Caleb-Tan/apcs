@@ -1,9 +1,18 @@
 
+import java.util.HashMap;
+
 public class TruthAssignment {
+    
+    private HashMap<PropositionConstant, Boolean> hmap = new HashMap<PropositionConstant, Boolean>();
 
-	public void put(PropositionConstant b, boolean c) {
-		// TODO Auto-generated method stub
-		
-	}
-
+    
+    // put function adds the values given to the params to the arrays
+    public void put(PropositionConstant propC, boolean truthVal) {
+        hmap.put(propC, truthVal);
+    }
+    
+    public HashMap<PropositionConstant, Boolean> getHmap() {
+        return hmap;
+    }
+    
 }

@@ -1,9 +1,13 @@
 
 public class PropositionConstant {
 	
-	public String PropConstant;
+	private String propConstant;
 	 
 	public PropositionConstant(String string){
-		this.PropConstant = string;
+		this.propConstant = string;
+	}
+	
+	public String getConstant() {
+		return propConstant;
 	}
 }

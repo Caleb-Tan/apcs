@@ -1,13 +1,18 @@
 
-public class LogicalSentence {
 
-	String logSentence;
-	public LogicalSentence(PropositionConstant x) {
-		this.logSentence = x.PropConstant;
+
+public class LogicalSentence{
+
+	private PropositionConstant logSentence;
+	
+	public LogicalSentence() {
 	}
-	public String evaluate(TruthAssignment assignment) {
+	
+	public LogicalSentence(PropositionConstant propC) {
+		this.logSentence = propC;
+	}
+	public PropositionConstant getPropositionConstant(){
 		return logSentence;
-		// ODO Auto-generated method stub
 	}
 
 }

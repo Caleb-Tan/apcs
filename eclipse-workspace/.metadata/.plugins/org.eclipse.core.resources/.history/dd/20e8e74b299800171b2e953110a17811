@@ -1,0 +1,9 @@
+
+public class Negation extends LogicalSentence {
+
+	public Negation(LogicalSentence y) {
+		super(y);
+		
+	}
+	
+}

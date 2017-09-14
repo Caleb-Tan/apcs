@@ -1,0 +1,10 @@
+
+public class Negation extends LogicalSentence {
+
+	String negation;
+	public Negation(PropositionConstant y) {
+		super(y);
+		this.negation = "~" + getPropositionConstant().getConstant();
+	}
+	
+}

@@ -1,0 +1,14 @@
+
+
+
+public class LogicalSentence{
+
+	String logSentence;
+	public LogicalSentence(PropositionConstant x) {
+		this.logSentence = x.getConstant();
+	}
+	public String getLogSentence(){
+		return logSentence;
+	}
+
+}

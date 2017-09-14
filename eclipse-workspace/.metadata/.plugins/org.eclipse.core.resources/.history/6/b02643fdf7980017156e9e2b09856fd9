@@ -1,0 +1,13 @@
+
+public class Conjunction extends LogicalSentence {
+	private String conjunction;
+	
+	public Conjunction(LogicalSentence logSen, Negation neg) {
+		this.conjunction = logSen.getPropositionConstant().getConstant() + neg.Negation();
+	}
+	
+	public String getConjunction(){
+		return conjunction;
+	}
+	
+}

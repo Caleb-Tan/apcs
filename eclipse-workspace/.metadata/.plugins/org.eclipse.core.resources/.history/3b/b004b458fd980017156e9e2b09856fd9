@@ -1,0 +1,18 @@
+
+
+
+public class LogicalSentence{
+
+	private PropositionConstant logSentence;
+	
+	public LogicalSentence() {
+	}
+	
+	public LogicalSentence(PropositionConstant x) {
+		this.logSentence = x;
+	}
+	public PropositionConstant getPropositionConstant(){
+		return logSentence;
+	}
+
+}

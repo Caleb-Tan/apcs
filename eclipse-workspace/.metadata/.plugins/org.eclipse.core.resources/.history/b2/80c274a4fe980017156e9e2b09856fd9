@@ -1,0 +1,19 @@
+import java.util.HashMap;
+
+
+public class Conjunction extends LogicalSentence {
+	private String conjunction;
+	
+	public Conjunction(LogicalSentence logSen, Negation neg) {
+		this.conjunction = logSen.getPropositionConstant().getConstant() + neg.getNegation();
+	}
+	
+	public String getConjunction(){
+		return conjunction;
+	}
+	
+	public HashMap<PropositionConstant, Boolean> evaluate(TruthAssignment truth){
+		return truth.getHmap();
+	}
+	
+}

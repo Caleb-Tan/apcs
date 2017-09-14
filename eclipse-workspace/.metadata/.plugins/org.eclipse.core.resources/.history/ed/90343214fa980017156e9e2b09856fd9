@@ -1,0 +1,11 @@
+
+public class TruthAssignment {
+	private boolean truthValue;
+	public void put(PropositionConstant propConstant, boolean truthValue) {
+		 this.truthValue = truthValue;
+	}
+	
+	public boolean getTruthValue(){
+		return truthValue;
+	}
+}
