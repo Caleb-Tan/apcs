@@ -1,25 +1,15 @@
-import java.util.HashMap;
-
 
 public class Conjunction extends LogicalSentence {
-	private String conjunction;
+	private LogicalSentence sentence1, sentence2;
 	
 	public Conjunction(LogicalSentence logSen, Negation neg) {
-		this.conjunction = logSen.getPropositionConstant().getConstant() + "&" + neg.getNegation();
+		this.sentence1 = logSen;
+		this.sentence2 = neg;
 	}
 	
-	public String getConjunction(){
-		return conjunction;
-	}
-	
-	public String evaluate(TruthAssignment truth){
-		HashMap<PropositionConstant, Boolean> hmap = new HashMap<PropositionConstant, Boolean>();
-		hmap = truth.getHmap();
-		String s = null;
-		for (HashMap.Entry<PropositionConstant, Boolean> entry : hmap.entrySet()) {
-		    s = entry.getKey() + ": " + entry.getValue();
-		}
-		return s;
+	@Override
+	public Boolean evaluate(TruthAssignment truth){
+		return (sentence1.evaluate(truth) && sentence2.evaluate(truth));
 	}
 	
 }

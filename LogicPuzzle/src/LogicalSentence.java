@@ -1,6 +1,5 @@
 
 
-
 public class LogicalSentence{
 
 	private PropositionConstant logSentence;
@@ -13,6 +12,10 @@ public class LogicalSentence{
 	}
 	public PropositionConstant getPropositionConstant(){
 		return logSentence;
+	}
+	
+	public Boolean evaluate(TruthAssignment truth) {
+		return truth.getHmap(logSentence.getConstant());
 	}
 
 }

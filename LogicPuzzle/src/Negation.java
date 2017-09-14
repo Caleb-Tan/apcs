@@ -1,23 +1,20 @@
 
 public class Negation extends LogicalSentence {
 
-	private LogicalSentence negationLogSentence;
-	private String negatedPropConstant;
+
+	private LogicalSentence negatedLogSentence;
 	
     public Negation(LogicalSentence logSen) {
-        this.negationLogSentence = logSen;
+    	negatedLogSentence = logSen;
     }
     
-    public void Negate(){
-    	negatedPropConstant = "~" + this.negationLogSentence.getPropositionConstant().getConstant() + this.negatedPropConstant;
+    
+    public LogicalSentence getNegation(){
+    	return negatedLogSentence;
     }
     
-    public String getNegation(){
-    	return negatedPropConstant;
+    public Boolean evaluate(TruthAssignment truth) {
+    	return !(negatedLogSentence.evaluate(truth));
     }
-    /*public boolean evaluate(TruthAssignment truthVal) {
-        boolean retVal = !logSen.evaluate(truthVal);
-        
-        return retVal;
-    }*/
+    
 }
