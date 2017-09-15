@@ -1,0 +1,12 @@
+# Logic Puzzle README
+
+# Purpose
+
+The purpose of this project was to demonstrate polymorphism and the principle of class inheritance through the use of proposition constants and logical sentences. It also tested our problem 
+solving skills by tasking us with the task of making truth tables based on the amount of constants given. 
+
+# How I did it
+
+Based on the main class given, we were supposed to figure out what the program did, and what each class was supposed to do. In the first block of code in the main class, the main function of those 
+objects is to contain a proposition constant string that is placed into the parameter. This proposition constant object is later passed into the parameter of the logical sentence. The logical 
+sentence 

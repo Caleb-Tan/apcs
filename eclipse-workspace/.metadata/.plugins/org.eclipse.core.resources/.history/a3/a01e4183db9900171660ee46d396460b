@@ -1,8 +1,8 @@
 
-public class Disjunction extends LogicalSentence {
+public class Biconditional extends LogicalSentence {
 	private LogicalSentence sentence1, sentence2;
 	
-	public Disjunction(LogicalSentence logSen, Negation neg) {
+	public Biconditional(LogicalSentence logSen, Negation neg) {
 		this.sentence1 = logSen;
 		this.sentence2 = neg;
 	}
@@ -10,6 +10,10 @@ public class Disjunction extends LogicalSentence {
 	@Override
 	/* disjunction returns true or false based on if sentence1 and 2 are true, then it returns true */
 	public Boolean evaluate(TruthAssignment truth){
-		return (sentence1.evaluate(truth) || sentence2.evaluate(truth));
+		if((sentence1.evaluate(truth) == sentence2.evaluate(truth))){
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

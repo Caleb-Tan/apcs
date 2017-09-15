@@ -7,8 +7,8 @@ public class Nand extends LogicalSentence {
 		this.sentence2 = neg;
 	}
 	
-	@Override
 	/* nand returns true or false. will return true as long as both of the sentences are not true */
+	@Override
 	public Boolean evaluate(TruthAssignment truth){
 		return !(sentence1.evaluate(truth) && sentence2.evaluate(truth));
 	}

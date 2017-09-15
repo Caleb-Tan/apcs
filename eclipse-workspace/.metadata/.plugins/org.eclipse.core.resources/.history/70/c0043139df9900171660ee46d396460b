@@ -1,0 +1,15 @@
+# Logic Puzzle README
+
+# Purpose
+
+The purpose of this project was to demonstrate polymorphism and the principle of class inheritance through the use of proposition constants and logical sentences. It also tested our problem 
+solving skills by tasking us with the task of making truth tables based on the amount of constants given. 
+
+# Explanation of what in the world is going on...
+
+Based on the main class given, we were supposed to figure out what the program did, and what each class was supposed to do. 
+
+In the first block of code in the main class, the main function of the objects is to contain a proposition constant string that is placed into the parameter. This proposition constant object 
+is later passed into the parameter of the logical sentence. The logical sentence class is the parent class of negation, disjunction, conjunction, Nand, Biconditional, and Conditional, which are 
+types of Logical Sentences that modify the logical sentences that are passed into them. Next, there is the truth assignment class. This class has a method .put() which takes in two parameters, a
+String constant and a boolean value. 

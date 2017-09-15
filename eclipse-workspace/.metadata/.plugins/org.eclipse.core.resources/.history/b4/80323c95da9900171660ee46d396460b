@@ -7,8 +7,8 @@ public class Disjunction extends LogicalSentence {
 		this.sentence2 = neg;
 	}
 	
-	@Override
 	/* disjunction returns true or false based on if sentence1 and 2 are true, then it returns true */
+	@Override
 	public Boolean evaluate(TruthAssignment truth){
 		return (sentence1.evaluate(truth) || sentence2.evaluate(truth));
 	}
