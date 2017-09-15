@@ -1,0 +1,19 @@
+
+
+public class LogicalSentence{
+
+	private PropositionConstant logSentence;
+	
+	public LogicalSentence() {
+	}
+	
+	/* a proposition constant class to be */
+	public LogicalSentence(PropositionConstant propC) {
+		this.logSentence = propC;
+	}
+	
+	public Boolean evaluate(TruthAssignment truth) {
+		return truth.getHmap(logSentence.getConstant());
+	}
+
+}

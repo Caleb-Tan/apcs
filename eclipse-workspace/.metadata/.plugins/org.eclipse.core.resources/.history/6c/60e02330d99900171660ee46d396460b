@@ -1,0 +1,18 @@
+
+import java.util.HashMap;
+
+public class TruthAssignment {
+    
+    private HashMap<String, Boolean> hmap = new HashMap<String, Boolean>();
+    
+    /* put function adds the values given to the params to the hashmap */
+    public void put(PropositionConstant propC, boolean truthVal) {
+        hmap.put(propC.getConstant(), truthVal);
+    }
+    
+    /* based on  */
+    public Boolean getHmap(String name) {
+        return hmap.get(name);
+    }
+    
+}

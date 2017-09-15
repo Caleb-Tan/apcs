@@ -1,0 +1,15 @@
+
+
+public class LogicalSentence{
+
+	private PropositionConstant logSentence;
+	
+	public LogicalSentence() {
+	}
+	
+	
+	public Boolean evaluate(TruthAssignment truth) {
+		return truth.getHmap(logSentence.getConstant());
+	}
+
+}

@@ -1,0 +1,15 @@
+
+public class Disjunction extends LogicalSentence {
+	private LogicalSentence sentence1, sentence2;
+	
+	public Disjunction(LogicalSentence logSen, Negation neg) {
+		this.sentence1 = logSen;
+		this.sentence2 = neg;
+	}
+	
+	/* disjunction returns true or false. if either or both sentence1 and 2 are true, then it returns true */
+	@Override
+	public Boolean evaluate(TruthAssignment truth){
+		return (sentence1.evaluate(truth) || sentence2.evaluate(truth));
+	}
+}
