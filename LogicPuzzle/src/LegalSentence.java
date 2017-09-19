@@ -18,7 +18,7 @@ public class LegalSentence {
 		}
 
 		// if statement checks to see if the last value is p or q
-		if (splitted[splitted.length-1].matches("p|q"){
+		if (splitted[splitted.length-1].matches("p|q")){
 			System.out.println("Is a legal sentence.");
             return true;
 		}
