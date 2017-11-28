@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Main {
 
+
 	public static void main(String[] args) {
-		
 		Scanner in = new Scanner(System.in);
 		String[] words = new String[7];
 		for (int i = 0; i < 7; i ++){
@@ -12,8 +12,8 @@ public class Main {
 		}
 		generate(words);
 	}
-	
-	
+
+
 	public static void generate(String[] words){
 		for (int x=0; x <= 6; x++){
 			for (int y=6; y > x; y--){
