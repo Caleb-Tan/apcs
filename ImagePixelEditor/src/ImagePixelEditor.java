@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
+import static com.sun.tools.doclint.Entity.image;
+
 
 public class ImagePixelEditor {
     public static void main(String[] args) {
@@ -13,17 +15,24 @@ public class ImagePixelEditor {
 
 class ImageBuffered extends Component {
 
-    Color choice = new Color(255, 0, 0); // Color of choice to change to
+    Color choice = new Color(150, 120, 0); // Color of choice to change to
 
 
     /* constructor reads a new image file, and calls teh iterate through pixels method */
     public ImageBuffered() {
+        String imagePath = "image.jpg";
         try {
             // get the BufferedImage, using the ImageIO class
-            BufferedImage image = ImageIO.read(new File("image.jpg"));
+            BufferedImage image = ImageIO.read(new File(imagePath));
             iterateThroughPixels(image);
         } catch (IOException e) {
             System.out.println("Image not found. Error: " + e);
+        } finally {
+            String extension = imagePath.substring(imagePath.lastIndexOf(".")+1);
+            if (extension.matches("jpg|png|gif|jpeg")){
+            } else {
+                System.out.println("Not an image file");
+            }
         }
     }
 
@@ -37,8 +46,8 @@ class ImageBuffered extends Component {
         int green=(pixel>>8) &0x0ff;
         int blue= (pixel)    &0x0ff;
 
-        // set new rgb color if matching 255,170,0
-        if (red == 255 & green == 255 & blue == 255) {
+        // set new rgb color if it is close to white
+        if (red >= 200 & green >= 200 & blue >= 200) {
             image.setRGB(x, y, choice.getRGB());
         }
     }
