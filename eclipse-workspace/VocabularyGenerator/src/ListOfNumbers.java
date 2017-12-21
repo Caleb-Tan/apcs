@@ -1,92 +1,32 @@
 
-/*
- * Copyright (c) 1995, 2008, Oracle and/or its affiliates. All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without
- * modification, are permitted provided that the following conditions
- * are met:
- *
- *   - Redistributions of source code must retain the above copyright
- *     notice, this list of conditions and the following disclaimer.
- *
- *   - Redistributions in binary form must reproduce the above copyright
- *     notice, this list of conditions and the following disclaimer in the
- *     documentation and/or other materials provided with the distribution.
- *
- *   - Neither the name of Oracle or the names of its
- *     contributors may be used to endorse or promote products derived
- *     from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
- * IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
- * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
- * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
- * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
- * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
- * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
 
-import java.io.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Vector;
 
 public class ListOfNumbers {
-    private List<Integer> list;
-    private Vector<Integer> vector = new Vector<Integer>();
-    private static final int SIZE = 10;
-
-    public ListOfNumbers () {
-        list = new ArrayList<Integer>(SIZE);
-        for (int i = 0; i < SIZE; i++) list.add(i);
+    public static void main(String[] args) {
+        int[] arr = new int[3];
+        arr[0] = 3;
+        arr[1] = 0;
+        arr[2] = 1;
+        System.out.println("------");
+        System.out.println(prev(arr, -11));
     }
-
-
-    public void readList(String fileName) {
-        Path filePath = Paths.get(fileName);
-        Scanner scanner = null;
-        try {
-            scanner = new Scanner(filePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        while (scanner.hasNext()) {
-            if (scanner.hasNextInt()) {
-                vector.add(scanner.nextInt());
-            } else {
-                scanner.next();
+    static int prev(int[] ar, int index){
+        index = Math.abs(index);
+        int[] newArr = new int[200];
+        int counter = 0;
+        for (int y = 0; y < newArr.length; y++){
+            if (counter < newArr.length) {
+                for (int x = 0; x < ar.length; x++) {
+                    newArr[counter] = ar[x];
+                    System.out.println(newArr[counter]);
+                    counter++;
+                }
             }
         }
-        System.out.println(vector);
+        System.out.println("_____");
+        System.out.println(index);
+        index = Math.abs(index);
+        return newArr[index];
     }
 
-    public void writeList() {
-        PrintWriter out = null;
-
-        try {
-            System.out.println("Entering try statement");
-            out = new PrintWriter(new FileWriter("WrittenFile.txt"));
-
-            for (int i = 0; i < SIZE; i++) out.println("Value at: " + i + " = " + list.get(i));
-            out.close();
-        } catch (IndexOutOfBoundsException e) {
-            System.err.println("Caught IndexOutOfBoundsException: " +
-                    e.getMessage());
-        } catch (IOException e) {
-            System.err.println("Caught IOException: " + e.getMessage());
-        } finally {
-            if (out != null) {
-                System.out.println("Closing PrintWriter");
-            } else {
-                System.out.println("PrintWriter not open");
-            }
-        }
-    }
 }
