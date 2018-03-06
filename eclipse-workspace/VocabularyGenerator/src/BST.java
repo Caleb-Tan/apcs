@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-class DriverClass {
+class Driver {
     public static void main(String args[]){
         double depthAverage = 0;
+        // creates 100 trees that are each 10000 nodes inserted in random order. finds the average depth of the 100 trees
         for (int x = 0; x < 100; x++) {
             ArrayList<Integer> arrNodes = new ArrayList<>();
             for (int i = 1; i <= 10000; i++) arrNodes.add(i);
@@ -21,7 +22,7 @@ class DriverClass {
 }
 
 /*
-    The Average depth of a 10000 node tree inserted in random order is 31-32 levels deep. 
+    The Average depth of a 10000 node tree inserted in random order is 31-32 levels deep.
     Algorithm Analysis:
     Search worst case order of growth: O(n). The node is at the bottom of the tree, so all elements need to be traversed.
     Search best case order of growth: O(1). The node to be searched is the root.
